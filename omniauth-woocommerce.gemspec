@@ -13,5 +13,5 @@ Gem::Specification.new do |gem|
   gem.files         = Dir['lib/**/*.rb']
   gem.require_paths = ['lib']
 
-  gem.add_runtime_dependency 'omniauth', '> 1.0'
+  gem.add_runtime_dependency 'omniauth', '~> 2.1'
 end

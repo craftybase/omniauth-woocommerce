@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     omniauth-woocommerce (0.0.1)
-      omniauth (> 1.0)
+      omniauth (~> 2.1)
 
 GEM
   remote: http://rubygems.org/
@@ -15,7 +15,7 @@ GEM
       rack (>= 2.2.3)
       rack-protection
     rack (3.1.8)
-    rack-protection (4.1.0)
+    rack-protection (4.1.1)
       base64 (>= 0.1.0)
       logger (>= 1.6.0)
       rack (>= 3.0.0, < 4)

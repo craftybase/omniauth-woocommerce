@@ -43,9 +43,16 @@ module OmniAuth
         @identity
       end
 
-    protected
+      protected
+
+      def callback_url
+        query = URI.encode_www_form({ return_url: return_url, site: site, user_id: user_id })
+        full_host + callback_path + "?#{query}"
+      end
+
       def site
-        validate_site(options.site)
+        url = /(https?:\/\/)?.*\.\w+(\.\w+)*(\/\w+)*(\.\w*)?/.match(options.site).to_s
+        validate_site(url)
       end
 
       def app_name
